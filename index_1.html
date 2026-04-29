@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AS Psychology 9990 — Unit 1: Research Methods, Ethics & Debates</title>
+<style>
+/* =========================================================
+   AS Psychology 9990 — Unit 1 study companion
+   Multi-page · Quizlet-style flashcards · self-contained
+   ========================================================= */
+
+:root {
+  --bg: #f4f1ea;
+  --bg-2: #ebe6da;
+  --paper: #fffdf7;
+  --ink: #1c1a17;
+  --ink-soft: #4a4640;
+  --rule: #c9c0ad;
+  --accent: #8b1e1e;
+  --accent-2: #1f4d3e;
+  --accent-3: #b87333;
+  --highlight: #f0e6c8;
+  --shadow: 0 1px 0 rgba(0,0,0,0.05), 0 6px 18px rgba(60,40,20,0.08);
+  --shadow-lg: 0 4px 12px rgba(60,40,20,0.08), 0 20px 40px rgba(60,40,20,0.12);
+  --serif: "Iowan Old Style", "Sitka Text", Georgia, "Times New Roman", serif;
+  --display: "Playfair Display", "Iowan Old Style", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #ece4cf 0%, transparent 60%),
+    radial-gradient(800px 500px at 110% 20%, #e2d6b8 0%, transparent 55%),
+    var(--bg);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* ---------- Top bar ---------- */
+header.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 253, 247, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+header.topbar .brand {
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--accent);
+}
+header.topbar .brand small {
+  display: block;
+  font-family: var(--serif);
+  font-size: 11px;
+  color: var(--ink-soft);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 2px;
+}
+header.topbar nav {
+  margin-left: auto;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+header.topbar nav button {
+  font-family: var(--serif);
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--ink-soft);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+header.topbar nav button:hover {
+  background: var(--highlight);
+  color: var(--accent);
+}
+header.topbar nav button.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+/* ---------- Pages ---------- */
+.page {
+  display: none;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+  animation: fadeIn 0.3s ease;
+}
+.page.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 56px 24px 36px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 32px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 28px; left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 1px;
+  background: var(--accent);
+}
+.hero .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  line-height: 1.05;
+  margin: 0 0 14px;
+  letter-spacing: -0.01em;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 600;
+}
+.hero .subtitle {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 18px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.hero .meta {
+  margin-top: 24px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+}
+.hero .meta span { padding: 0 14px; border-right: 1px solid var(--rule); }
+.hero .meta span:last-child { border-right: none; }
+
+/* ---------- Section grid ---------- */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+.section-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 28px 26px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  text-align: left;
+  font-family: var(--serif);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+.section-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+.section-card .num {
+  font-family: var(--display);
+  font-size: 36px;
+  color: var(--accent);
+  font-weight: 800;
+  line-height: 1;
+}
+.section-card h3 {
+  font-family: var(--display);
+  font-size: 22px;
+  margin: 12px 0 6px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.section-card h3::before { content: none; }
+.section-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.45;
+}
+.section-card .arrow {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+  color: var(--accent);
+  font-family: var(--display);
+  font-size: 20px;
+  transition: transform 0.2s;
+}
+.section-card:hover .arrow { transform: translateX(4px); }
+
+/* ---------- Page header ---------- */
+.page-header {
+  margin-bottom: 36px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--ink);
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+.page-header .ch-num {
+  font-family: var(--display);
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+.page-header h2 {
+  font-family: var(--display);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.page-header .ch-tagline {
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+h3.section-mark {
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 700;
+  margin: 36px 0 14px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+h3.section-mark::before {
+  content: "§";
+  color: var(--accent);
+  margin-right: 8px;
+  font-weight: 400;
+}
+h4 {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 24px 0 8px;
+  color: var(--accent-2);
+}
+
+p { margin: 0 0 14px; }
+
+/* ===========================================================
+   QUIZLET-STYLE FLASHCARDS
+   =========================================================== */
+.quiz-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.quiz-controls input[type="search"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 14px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  font-family: var(--serif);
+  font-size: 15px;
+  border-radius: 4px;
+  color: var(--ink);
+}
+.quiz-controls input[type="search"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(139,30,30,0.15);
+}
+.filter-chip {
+  padding: 8px 14px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  font-family: var(--serif);
+  font-size: 13px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s;
+  letter-spacing: 0.02em;
+}
+.filter-chip:hover { background: var(--highlight); }
+.filter-chip.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.quiz-progress {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.quiz-progress .counter {
+  font-family: var(--display);
+  font-size: 16px;
+  color: var(--ink-soft);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.quiz-progress .counter strong {
+  color: var(--accent);
+  font-size: 22px;
+}
+.quiz-progress .bar {
+  flex: 1;
+  height: 4px;
+  background: var(--rule);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.quiz-progress .bar-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+
+.quiz-stage {
+  perspective: 1500px;
+  margin: 0 auto 24px;
+  max-width: 720px;
+}
+.quiz-card {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  cursor: pointer;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.quiz-card.flipped { transform: rotateY(180deg); }
+
+.quiz-card .face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 48px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  overflow: auto;
+}
+.quiz-card .face::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 5px;
+  background: var(--accent);
+  border-radius: 12px 12px 0 0;
+}
+.quiz-card .back { transform: rotateY(180deg); }
+.quiz-card .back::before { background: var(--accent-2); }
+
+.quiz-card .label {
+  position: absolute;
+  top: 22px;
+  left: 28px;
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+.quiz-card .category-tag {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--accent);
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.quiz-card .back .category-tag { background: var(--accent-2); }
+
+.quiz-card .term {
+  font-family: var(--display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.quiz-card .definition {
+  font-size: clamp(16px, 2.2vw, 19px);
+  line-height: 1.55;
+  text-align: center;
+  color: var(--ink);
+  max-width: 580px;
+}
+.quiz-card .definition strong { color: var(--accent); }
+
+.quiz-card .flip-hint {
+  position: absolute;
+  bottom: 22px;
+  left: 0; right: 0;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  opacity: 0.6;
+}
+
+.quiz-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.nav-btn {
+  font-family: var(--serif);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  padding: 10px 22px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.nav-btn:hover:not(:disabled) {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.nav-btn.primary {
+  background: var(--accent);
+  color: var(--paper);
+  border-color: var(--accent);
+}
+.nav-btn.primary:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+.shuffle-btn, .reset-btn {
+  background: transparent;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  padding: 10px 18px;
+  border: 1px solid var(--rule);
+  color: var(--ink-soft);
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: var(--serif);
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.15s;
+}
+.shuffle-btn:hover, .reset-btn:hover {
+  background: var(--highlight);
+  color: var(--accent);
+}
+
+.quiz-keyboard-hint {
+  text-align: center;
+  font-size: 11px;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin-top: 12px;
+  letter-spacing: 0.04em;
+}
+.quiz-keyboard-hint kbd {
+  display: inline-block;
+  padding: 1px 6px;
+  background: var(--bg-2);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  font-family: var(--serif);
+  font-size: 11px;
+  margin: 0 2px;
+}
+
+.quiz-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+/* ---------- Tables ---------- */
+.eval-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 24px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  font-size: 15px;
+}
+.eval-table th {
+  background: var(--ink);
+  color: var(--paper);
+  text-align: left;
+  padding: 10px 14px;
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.eval-table th.strength { background: var(--accent-2); }
+.eval-table th.weakness { background: var(--accent); }
+.eval-table td {
+  padding: 12px 14px;
+  border-top: 1px solid var(--rule);
+  vertical-align: top;
+  width: 50%;
+}
+.eval-table tr:nth-child(even) td { background: rgba(240,230,200,0.25); }
+
+/* ---------- Technique cards ---------- */
+.technique-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  padding: 24px 28px;
+  margin: 20px 0;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+}
+.technique-card h4 {
+  margin-top: 0;
+  font-family: var(--display);
+  font-size: 22px;
+  color: var(--accent);
+}
+.technique-card .features-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+.technique-card .features-list li {
+  padding: 6px 0 6px 24px;
+  position: relative;
+}
+.technique-card .features-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ---------- 10-marker examples ---------- */
+.exam-example {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  margin: 18px 0;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.exam-example summary {
+  padding: 18px 24px;
+  background: linear-gradient(to right, var(--bg-2), var(--paper));
+  cursor: pointer;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--ink);
+  list-style: none;
+  position: relative;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s;
+}
+.exam-example summary:hover { background: var(--highlight); }
+.exam-example[open] summary { border-bottom-color: var(--rule); }
+.exam-example summary::-webkit-details-marker { display: none; }
+.exam-example summary::after {
+  content: "+";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--accent);
+  transition: transform 0.2s;
+}
+.exam-example[open] summary::after { content: "−"; }
+.exam-example summary .difficulty {
+  display: inline-block;
+  font-family: var(--serif);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: var(--accent-2);
+  color: var(--paper);
+  padding: 2px 8px;
+  margin-right: 12px;
+  border-radius: 2px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.exam-example summary .difficulty.harder { background: var(--accent); }
+
+.exam-content { padding: 22px 24px 28px; }
+.exam-content .scenario {
+  background: rgba(240,230,200,0.4);
+  border-left: 3px solid var(--accent-3);
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  font-style: italic;
+  font-size: 15px;
+}
+.exam-content .scenario strong { font-style: normal; }
+.exam-content .answer-label {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  font-weight: 700;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+.exam-content ul.bullet-answer {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.exam-content ul.bullet-answer li {
+  padding: 10px 0 10px 28px;
+  position: relative;
+  border-bottom: 1px dashed var(--rule);
+}
+.exam-content ul.bullet-answer li:last-child { border-bottom: none; }
+.exam-content ul.bullet-answer li::before {
+  content: "●";
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  color: var(--accent);
+}
+.exam-content .feature-tag {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--paper);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 1px 6px;
+  border-radius: 2px;
+  margin-right: 4px;
+  vertical-align: 1px;
+  text-transform: uppercase;
+}
+.exam-content .feature-tag.detail { background: var(--accent-2); }
+.exam-content .feature-tag.brief { background: var(--accent-3); }
+
+.exam-content .procedure-box {
+  background: var(--bg-2);
+  border-radius: 4px;
+  padding: 14px 18px;
+  margin-top: 14px;
+}
+.exam-content .procedure-box ol {
+  margin: 0;
+  padding-left: 20px;
+}
+.exam-content .procedure-box ol li { margin-bottom: 8px; }
+
+/* ---------- Issues & Debates ---------- */
+.debate-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 22px 26px;
+  margin: 18px 0;
+  border-radius: 4px;
+  border-top: 3px solid var(--accent-3);
+  box-shadow: var(--shadow);
+}
+.debate-card h4 {
+  margin-top: 0;
+  font-family: var(--display);
+  font-size: 22px;
+  color: var(--accent-3);
+}
+.debate-card .definition-box {
+  font-style: italic;
+  color: var(--ink-soft);
+  border-left: 2px solid var(--accent-3);
+  padding-left: 14px;
+  margin: 10px 0 14px;
+}
+
+/* ---------- Ethics cards ---------- */
+.ethics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+.ethic-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 18px 20px;
+  border-radius: 4px;
+  position: relative;
+  padding-left: 50px;
+}
+.ethic-card .icon {
+  position: absolute;
+  left: 14px;
+  top: 16px;
+  width: 26px;
+  height: 26px;
+  background: var(--accent-2);
+  color: var(--paper);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 13px;
+}
+.ethic-card h5 {
+  font-family: var(--display);
+  font-size: 16px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+.ethic-card p {
+  font-size: 14px;
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+/* ---------- Pull-quote ---------- */
+.pro-tip {
+  background:
+    linear-gradient(to right, rgba(184, 115, 51, 0.08), transparent),
+    var(--paper);
+  border-left: 4px solid var(--accent-3);
+  padding: 16px 22px;
+  margin: 20px 0;
+  font-style: italic;
+  color: var(--ink);
+  font-size: 15px;
+  border-radius: 0 4px 4px 0;
+}
+.pro-tip strong {
+  font-style: normal;
+  color: var(--accent-3);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 24px;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 720px) {
+  header.topbar { padding: 10px 14px; flex-wrap: wrap; gap: 10px; }
+  header.topbar .brand { font-size: 16px; }
+  header.topbar nav { width: 100%; gap: 2px; justify-content: flex-start; }
+  header.topbar nav button { font-size: 11px; padding: 5px 9px; }
+  .hero { padding: 36px 18px 24px; }
+  .page-header { flex-direction: column; gap: 4px; align-items: flex-start; }
+  .page-header .ch-num { font-size: 40px; }
+  .page { padding: 32px 16px 64px; }
+  .quiz-card { height: 320px; }
+  .quiz-card .face { padding: 36px 28px; }
+  .quiz-controls input[type="search"] { width: 100%; }
+  .nav-btn { padding: 8px 16px; font-size: 13px; }
+  .technique-card { padding: 18px 18px; }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    AS Psychology 9990
+    <small>Unit 1 · Companion</small>
+  </div>
+  <nav id="mainNav">
+    <button data-page="home" class="active">Home</button>
+    <button data-page="methods">Methods</button>
+    <button data-page="flashcards">Flashcards</button>
+    <button data-page="techniques">Techniques</button>
+    <button data-page="tenmarker">10-marker</button>
+    <button data-page="ethics">Ethics</button>
+    <button data-page="debates">Debates</button>
+  </nav>
+</header>
+
+<!-- ============================================================
+     PAGE: HOME
+     ============================================================ -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="eyebrow">Cambridge International AS &amp; A Level · 2024–2026</div>
+    <h1>Research Methods,<br><em>Ethics &amp; Debates</em></h1>
+    <p class="subtitle">A complete study companion for Unit 1 — flashcards, technique features, worked 10-marker examples, ethical guidelines, and the AS-level issues &amp; debates.</p>
+    <div class="meta">
+      <span>9990 Syllabus</span>
+      <span>Hodder 3rd ed.</span>
+      <span>VinSchool Rubric</span>
+    </div>
+  </section>
+
+  <div class="section-grid">
+    <button class="section-card" data-goto="methods">
+      <span class="arrow">→</span>
+      <div class="num">I</div>
+      <h3>Research Methods</h3>
+      <p>The five techniques you must know — experiments, self-reports, observations, correlations, longitudinal studies. Strengths and weaknesses for each.</p>
+    </button>
+    <button class="section-card" data-goto="flashcards">
+      <span class="arrow">→</span>
+      <div class="num">II</div>
+      <h3>Flashcards</h3>
+      <p>110 study cards covering every term in the syllabus. Quizlet-style — click to flip, navigate with arrows, shuffle, filter by category.</p>
+    </button>
+    <button class="section-card" data-goto="techniques">
+      <span class="arrow">→</span>
+      <div class="num">III</div>
+      <h3>Techniques &amp; features</h3>
+      <p>The four required features for each technique on the 10-marker planning question — straight from the syllabus and rubric.</p>
+    </button>
+    <button class="section-card" data-goto="tenmarker">
+      <span class="arrow">→</span>
+      <div class="num">IV</div>
+      <h3>10-marker examples</h3>
+      <p>Eight worked sample answers — two per technique, easier and harder — showing exactly how to hit Level 5 on Paper 2.</p>
+    </button>
+    <button class="section-card" data-goto="ethics">
+      <span class="arrow">→</span>
+      <div class="num">V</div>
+      <h3>Ethical guidelines</h3>
+      <p>Seven human-participant guidelines and seven animal-research guidelines, with brief definitions and links to core studies.</p>
+    </button>
+    <button class="section-card" data-goto="debates">
+      <span class="arrow">→</span>
+      <div class="num">VI</div>
+      <h3>Issues &amp; Debates</h3>
+      <p>The five AS-level debates — application, individual vs situational, nature vs nurture, use of children, use of animals.</p>
+    </button>
+  </div>
+</div>
+
+<!-- ============================================================
+     PAGE: METHODS
+     ============================================================ -->
+<div class="page" id="page-methods">
+  <div class="page-header">
+    <div class="ch-num">I</div>
+    <div>
+      <h2>Research Methods at a glance</h2>
+      <div class="ch-tagline">The five techniques you must know — laboratory and field experiments, self-reports, observations, correlations, plus longitudinal designs.</div>
+    </div>
+  </div>
+
+  <p>Every research method has strengths and weaknesses, and a psychologist must evaluate how the method they have chosen contributes to the validity and reliability of their specific investigation. The 9990 syllabus expects you to <em>describe</em> the main features of each method, <em>evaluate</em> them in terms of reliability, validity and ethics, and <em>apply</em> your knowledge to a novel scenario.</p>
+
+  <h3 class="section-mark">Experiments</h3>
+  <p>An experiment is an investigation looking for a causal relationship in which an <strong>independent variable</strong> (IV) is manipulated and is expected to be responsible for changes in the <strong>dependent variable</strong> (DV). At AS Level you only need to know two types: <em>laboratory</em> and <em>field</em>.</p>
+
+  <table class="eval-table">
+    <thead><tr><th class="strength">Laboratory — Strengths</th><th class="weakness">Laboratory — Weaknesses</th></tr></thead>
+    <tbody>
+      <tr><td>High control of variables, allowing cause-and-effect to be inferred with confidence.</td><td>Artificial setting and tasks reduce ecological validity.</td></tr>
+      <tr><td>Standardised procedures and instructions make replication straightforward, supporting reliability.</td><td>Features of the environment may reveal the aim, producing demand characteristics.</td></tr>
+    </tbody>
+  </table>
+
+  <table class="eval-table">
+    <thead><tr><th class="strength">Field — Strengths</th><th class="weakness">Field — Weaknesses</th></tr></thead>
+    <tbody>
+      <tr><td>High ecological validity — participants behave naturally in their everyday environment.</td><td>Low control over extraneous and situational variables makes replication difficult.</td></tr>
+      <tr><td>Limited demand characteristics, since participants often do not know they are being studied.</td><td>Ethical issues — participants typically cannot give informed consent or be debriefed.</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="section-mark">Self-reports</h3>
+  <p>Self-reports involve asking questions to gain information directly from participants. The two main types are <em>questionnaires</em> (mainly written) and <em>interviews</em> (verbal). Questions can be <em>open</em> (free response, qualitative) or <em>closed</em> (fixed responses, quantitative).</p>
+
+  <table class="eval-table">
+    <thead><tr><th class="strength">Questionnaire — Strengths</th><th class="weakness">Questionnaire — Weaknesses</th></tr></thead>
+    <tbody>
+      <tr><td>A large sample can answer in a short time, increasing representativeness and generalisability.</td><td>Closed questions may force answers that don't reflect the participant's true opinion.</td></tr>
+      <tr><td>Participants are more likely to give truthful answers without face-to-face pressure.</td><td>Social desirability bias may still distort responses.</td></tr>
+    </tbody>
+  </table>
+
+  <table class="eval-table">
+    <thead><tr><th class="strength">Interview — Strengths</th><th class="weakness">Interview — Weaknesses</th></tr></thead>
+    <tbody>
+      <tr><td>Open questions yield rich qualitative data revealing <em>why</em> participants behave or feel as they do.</td><td>Face-to-face setting can lead to social desirability and reduced truthfulness.</td></tr>
+      <tr><td>Semi-structured and unstructured formats allow follow-up questions to clarify meaning.</td><td>Interviewer bias can affect both questioning style and interpretation, lowering objectivity.</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="section-mark">Observations</h3>
+  <p>An observation involves watching human or animal behaviour. Observers can be <em>overt/covert</em>, <em>participant/non-participant</em>, in a <em>naturalistic/controlled</em> setting, and use <em>structured/unstructured</em> recording.</p>
+
+  <table class="eval-table">
+    <thead><tr><th class="strength">Observation — Strengths</th><th class="weakness">Observation — Weaknesses</th></tr></thead>
+    <tbody>
+      <tr><td>Naturalistic settings give high ecological validity — participants behave authentically.</td><td>If participants know they're being observed (overt), they may show socially desirable behaviour.</td></tr>
+      <tr><td>Structured observations using behavioural checklists generate objective quantitative data.</td><td>Naturalistic studies are difficult to replicate as variables are not controlled, lowering reliability.</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="section-mark">Correlations</h3>
+  <p>A statistical technique that measures the relationship between two <em>co-variables</em>. Neither variable is manipulated — both are measured. Correlations can be <em>positive</em>, <em>negative</em>, or absent, and vary in <em>strength</em>.</p>
+
+  <table class="eval-table">
+    <thead><tr><th class="strength">Correlation — Strengths</th><th class="weakness">Correlation — Weaknesses</th></tr></thead>
+    <tbody>
+      <tr><td>Useful where manipulation would be unethical or impractical (e.g. stress and illness).</td><td>Cannot establish cause and effect — a third variable may explain both.</td></tr>
+      <tr><td>Allows researchers to identify patterns and generate hypotheses for future experiments.</td><td>Restricted to quantitative measured variables and cannot reveal the underlying reasons for behaviour.</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="section-mark">Longitudinal studies</h3>
+  <p>A longitudinal study collects data from the same participants on more than one occasion, often over months or years. It can use any research method (an experiment, questionnaire, observation, etc.) — what makes it longitudinal is the repeated testing.</p>
+
+  <table class="eval-table">
+    <thead><tr><th class="strength">Longitudinal — Strengths</th><th class="weakness">Longitudinal — Weaknesses</th></tr></thead>
+    <tbody>
+      <tr><td>Allows changes <em>within</em> participants to be tracked over time, removing participant variables.</td><td>Time-consuming and expensive — can take years to complete.</td></tr>
+      <tr><td>Can establish long-term effects of an intervention or developmental change.</td><td>Participant attrition (drop-out) reduces sample size and may bias findings.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="pro-tip">
+    <strong>Exam tip</strong>
+    Examiners reward precise terminology. Don't write "the experimenter watched them" — write "a covert, non-participant, naturalistic, structured observation was conducted using a behavioural checklist." Each named feature can earn a mark.
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE: FLASHCARDS — Quizlet style
+     ============================================================ -->
+<div class="page" id="page-flashcards">
+  <div class="page-header">
+    <div class="ch-num">II</div>
+    <div>
+      <h2>Flashcards</h2>
+      <div class="ch-tagline">Click the card to flip. Use the buttons (or arrow keys) to navigate. Filter by category or shuffle for variety.</div>
+    </div>
+  </div>
+
+  <div class="quiz-controls">
+    <input type="search" id="cardSearch" placeholder="Search terms or definitions…" autocomplete="off">
+    <button class="filter-chip active" data-filter="all">All</button>
+    <button class="filter-chip" data-filter="methods">Methods</button>
+    <button class="filter-chip" data-filter="concepts">Concepts</button>
+    <button class="filter-chip" data-filter="data">Data</button>
+    <button class="filter-chip" data-filter="ethics">Ethics</button>
+    <button class="filter-chip" data-filter="debates">Debates</button>
+  </div>
+
+  <div class="quiz-progress">
+    <div class="counter"><strong id="quizCurrent">1</strong> / <span id="quizTotal">110</span></div>
+    <div class="bar"><div class="bar-fill" id="quizBarFill"></div></div>
+    <button class="shuffle-btn" id="quizShuffle">⇄ Shuffle</button>
+    <button class="reset-btn" id="quizReset">Reset</button>
+  </div>
+
+  <div class="quiz-stage" id="quizStage">
+    <div class="quiz-card" id="quizCard">
+      <div class="face front">
+        <span class="label">Term</span>
+        <span class="category-tag" id="quizCategoryFront">methods</span>
+        <div class="term" id="quizTerm">Loading…</div>
+        <span class="flip-hint">click to flip</span>
+      </div>
+      <div class="face back">
+        <span class="label">Definition</span>
+        <span class="category-tag" id="quizCategoryBack">methods</span>
+        <div class="definition" id="quizDefinition">Loading…</div>
+        <span class="flip-hint">click to flip back</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="quiz-nav">
+    <button class="nav-btn" id="quizPrev">← Previous</button>
+    <button class="nav-btn primary" id="quizFlip">Flip</button>
+    <button class="nav-btn" id="quizNext">Next →</button>
+  </div>
+
+  <div class="quiz-keyboard-hint">
+    <kbd>←</kbd> previous · <kbd>→</kbd> next · <kbd>Space</kbd> flip
+  </div>
+
+  <div class="quiz-empty" id="quizEmpty" style="display:none;">No cards match your filter or search. Try clearing the search or changing the category.</div>
+</div>
+
+
+<!-- ============================================================
+     PAGE: TECHNIQUES
+     ============================================================ -->
+<div class="page" id="page-techniques">
+  <div class="page-header">
+    <div class="ch-num">III</div>
+    <div>
+      <h2>Techniques &amp; their required features</h2>
+      <div class="ch-tagline">For the Paper 2 planning question, every technique has a fixed list of features you must cover. Memorise these — using features from the wrong technique will cost marks.</div>
+    </div>
+  </div>
+
+  <p>The 9990 syllabus (page 50) and the VinSchool rubric agree on the same set of features for each technique. To reach Level 5 (9–10 marks), <em>all four features</em> must be covered with appropriate detail, and the plan must include four logical procedural steps that make the study replicable.</p>
+
+  <div class="technique-card">
+    <h4>Experiments — choose <em>laboratory</em> or <em>field</em></h4>
+    <ul class="features-list">
+      <li><strong>Independent variable (IV)</strong> — the factor you manipulate, with at least two operationalised levels (e.g. "music played: pop vs. classical vs. silence").</li>
+      <li><strong>Dependent variable (DV)</strong> — the factor you measure, fully operationalised (e.g. "number of words recalled out of 20 in 60 seconds").</li>
+      <li><strong>Controls / standardisation</strong> — at least two specific controls (e.g. same room temperature, same instructions read aloud, same time limit).</li>
+      <li><strong>Research design</strong> — independent measures, repeated measures, or matched pairs, with a justification linked to the brief.</li>
+    </ul>
+  </div>
+
+  <div class="technique-card">
+    <h4>Self-reports — choose <em>questionnaire</em> or <em>interview</em></h4>
+    <ul class="features-list">
+      <li><strong>Open AND/OR closed questions</strong> — state which type(s) and why.</li>
+      <li><strong>Examples of questions (4 items)</strong> — write four actual questions linked to the aim, not just topic areas.</li>
+      <li><strong>Question scoring OR interpretations</strong> — explain how responses will be scored (e.g. 5-point Likert: 1=strongly disagree to 5=strongly agree) or interpreted (for open questions: thematic analysis).</li>
+      <li><strong>Questionnaire only:</strong> paper-and-pencil OR online format.<br><strong>Interview only:</strong> structured / semi-structured / unstructured format.</li>
+    </ul>
+  </div>
+
+  <div class="technique-card">
+    <h4>Observational studies</h4>
+    <ul class="features-list">
+      <li><strong>Overt OR covert</strong> — are participants aware they are being observed?</li>
+      <li><strong>Participant OR non-participant</strong> — is the observer joining the group, or watching from outside?</li>
+      <li><strong>Naturalistic OR controlled</strong> — is it in the participants' natural environment, or a manipulated setting?</li>
+      <li><strong>Structured OR unstructured</strong> — pre-set behavioural categories with event/time sampling, or free recording of all behaviours?</li>
+    </ul>
+  </div>
+
+  <div class="technique-card">
+    <h4>Correlational studies</h4>
+    <ul class="features-list">
+      <li><strong>Two co-variables</strong> — name them clearly; both are measured (neither is manipulated).</li>
+      <li><strong>Operationalisation of co-variable 1</strong> — the precise way it will be measured (e.g. "self-reported screen time per day in hours").</li>
+      <li><strong>Operationalisation of co-variable 2</strong> — the precise way it will be measured (e.g. "PHQ-9 depression score, range 0–27").</li>
+      <li><strong>Description of graph and a directional hypothesis</strong> — predict positive or negative correlation, and describe what the scatter graph would look like.</li>
+    </ul>
+  </div>
+
+  <div class="pro-tip">
+    <strong>Mark scheme reminder</strong>
+    Bullet points are your friend on the 10-marker. They keep your writing legible and let you tag each <em>feature</em> visibly. The structure that gets full marks: <em>state the feature → give detail of how it works → link it back to the brief</em> (a real-world example using the names and aims given in the question).
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE: 10-MARKER
+     ============================================================ -->
+<div class="page" id="page-tenmarker">
+  <div class="page-header">
+    <div class="ch-num">IV</div>
+    <div>
+      <h2>Worked 10-marker examples</h2>
+      <div class="ch-tagline">Two scenarios per technique — one easier, one harder — with full sample answers showing exactly how to hit Level 5.</div>
+    </div>
+  </div>
+
+  <p>Each example follows the same structure: <em>scenario → bullet-point answer covering all four features → procedural steps for replicability</em>. Tags below show which feature each bullet addresses (<span class="feature-tag">FEATURE</span>), with detail (<span class="feature-tag detail">DETAIL</span>) and brief link (<span class="feature-tag brief">BRIEF</span>).</p>
+
+  <h3 class="section-mark">Technique 1 — Experiments</h3>
+
+  <details class="exam-example">
+    <summary><span class="difficulty">Easier</span>Caffeine and reaction time (laboratory experiment)</summary>
+    <div class="exam-content">
+      <div class="scenario">
+        <strong>Scenario.</strong> Tom is a sports scientist who wants to investigate whether caffeine improves reaction time. He has access to a sports lab with computerised reaction-time software. Plan a <strong>laboratory experiment</strong> to investigate this. Do not describe sample, sampling technique or ethical guidelines.
+      </div>
+      <div class="answer-label">Sample answer (10 marks)</div>
+      <ul class="bullet-answer">
+        <li><span class="feature-tag">IV</span> The independent variable will be the dose of caffeine consumed, with three levels: 0&nbsp;mg (placebo), 100&nbsp;mg, and 200&nbsp;mg, given in identical-looking capsules <span class="feature-tag detail">DETAIL</span>, so that Tom can see whether higher caffeine doses produce faster reactions <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">DV</span> The dependent variable will be reaction time, operationalised as the mean response time in milliseconds across 20 trials of a computerised "press the spacebar when a red dot appears" task <span class="feature-tag detail">DETAIL</span>, giving a precise reaction-time score for each athlete <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">CONTROLS</span> Standardised controls will include: all participants tested in the same sports lab at the same time of day (10 a.m.), with identical computer monitors and standardised instructions read aloud from a script <span class="feature-tag detail">DETAIL</span>; participants will also be asked to abstain from caffeine for 12 hours beforehand, ensuring any difference in reaction time is due to the caffeine dose rather than situational variables <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">DESIGN</span> An independent measures design will be used, with each participant randomly allocated to one of the three caffeine conditions <span class="feature-tag detail">DETAIL</span>; this avoids order effects (such as practice on the reaction-time task) that could otherwise inflate the apparent caffeine effect <span class="feature-tag brief">BRIEF</span>.</li>
+      </ul>
+      <div class="answer-label">Procedural steps (replicable)</div>
+      <div class="procedure-box">
+        <ol>
+          <li>Participants arrive at the sports lab at 10 a.m. having abstained from caffeine for 12 hours, and are randomly allocated to one of three groups using a random number generator.</li>
+          <li>Each participant is given a capsule (placebo, 100 mg or 200 mg caffeine) and waits 30 minutes for absorption.</li>
+          <li>Participants complete 20 trials of the computerised reaction-time task; mean response time in milliseconds is recorded automatically.</li>
+          <li>Mean reaction times are compared across the three conditions to test whether higher caffeine doses produce faster reaction times.</li>
+        </ol>
+      </div>
+    </div>
+  </details>
+
+  <details class="exam-example">
+    <summary><span class="difficulty harder">Harder</span>Background noise and exam performance (field experiment)</summary>
+    <div class="exam-content">
+      <div class="scenario">
+        <strong>Scenario.</strong> Mei is a teacher in a secondary school who suspects that classroom noise affects student performance on short test papers. She has permission to vary the listening conditions during regular weekly vocabulary tests in three Year 10 classes. Plan a <strong>field experiment</strong> to investigate whether background noise affects test performance. Do not describe sample, sampling technique or ethical guidelines.
+      </div>
+      <div class="answer-label">Sample answer (10 marks)</div>
+      <ul class="bullet-answer">
+        <li><span class="feature-tag">IV</span> The independent variable will be the type of background noise during the test, with three levels: silence, low-volume classical music (50 dB), and recorded café-style chatter (50 dB) <span class="feature-tag detail">DETAIL</span>; this will let Mei see whether noise type, rather than just noise volume, affects how Year 10 students perform on their vocabulary tests <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">DV</span> The dependent variable will be vocabulary test score, operationalised as the number of correct answers out of 20 on a standard 10-minute weekly test <span class="feature-tag detail">DETAIL</span>, giving Mei a precise quantitative measure of test performance under each noise condition <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">CONTROLS</span> Controls will include: all three Year 10 classes use the same vocabulary test paper of equivalent difficulty, the test is held at the same time on the same day of the week, the noise volume is set to 50 dB using a calibrated speaker, and identical instructions are read from a script <span class="feature-tag detail">DETAIL</span>. This ensures any difference in scores is due to the noise type rather than to test difficulty or time of day <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">DESIGN</span> A repeated measures design will be used, with all three classes experiencing all three noise conditions across three consecutive weeks, counterbalanced so that the order of conditions differs between classes (Latin square: ABC, BCA, CAB) <span class="feature-tag detail">DETAIL</span>. This removes participant variables — since the same students are tested under each condition — while counterbalancing controls order effects such as practice on weekly tests <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><em>Bonus location feature for field:</em> the experiment is conducted in the students' usual classroom, which preserves the ecological validity of the test situation while still allowing Mei to manipulate the noise variable.</li>
+      </ul>
+      <div class="answer-label">Procedural steps (replicable)</div>
+      <div class="procedure-box">
+        <ol>
+          <li>The three Year 10 classes are assigned to one of the three counterbalancing orders (ABC, BCA, CAB).</li>
+          <li>In Week 1, each class takes the weekly 20-item vocabulary test in their assigned condition (silence, classical music, or café chatter at 50 dB), with standardised instructions.</li>
+          <li>This is repeated in Weeks 2 and 3 with the remaining two conditions, using equivalent vocabulary tests of comparable difficulty.</li>
+          <li>Mean test scores for each student under each condition are compared to determine whether background noise type affects performance.</li>
+        </ol>
+      </div>
+    </div>
+  </details>
+
+  <h3 class="section-mark">Technique 2 — Self-reports</h3>
+
+  <details class="exam-example">
+    <summary><span class="difficulty">Easier</span>Sleep habits in university students (questionnaire)</summary>
+    <div class="exam-content">
+      <div class="scenario">
+        <strong>Scenario.</strong> Layla is a wellbeing officer at a university. She is concerned that students are not getting enough sleep. She wants to gather information from a large group of students about their sleep habits. Plan a <strong>questionnaire</strong> Layla could use. Do not describe sample, sampling technique or ethical guidelines.
+      </div>
+      <div class="answer-label">Sample answer (10 marks)</div>
+      <ul class="bullet-answer">
+        <li><span class="feature-tag">QUESTION TYPE</span> The questionnaire will use mainly closed questions to allow easy quantitative comparison across many students, with one open question at the end to capture rich qualitative data <span class="feature-tag detail">DETAIL</span>; this combination lets Layla compare sleep patterns numerically across the student body while also understanding individual reasons in students' own words <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">EXAMPLES (4)</span> Four sample questions: (1) "How many hours of sleep do you typically get on a weeknight? a) less than 4 b) 4–6 c) 6–8 d) more than 8"; (2) "How often do you use your phone in bed before sleeping? a) never b) sometimes c) often d) always"; (3) On a 5-point Likert scale: "I feel rested when I wake up — strongly disagree (1) to strongly agree (5)"; (4) Open question: "What, if anything, prevents you from getting enough sleep?"</li>
+        <li><span class="feature-tag">SCORING</span> Closed multiple-choice questions will be scored as the percentage of students choosing each option (e.g. % reporting fewer than 6 hours' sleep). Likert-scale items will be averaged across all respondents, where higher scores indicate greater feelings of rest <span class="feature-tag detail">DETAIL</span>. Open-question responses will be analysed thematically, identifying common themes such as "academic stress" or "screen time" <span class="feature-tag brief">BRIEF</span>, giving Layla actionable insight into student sleep at her university.</li>
+        <li><span class="feature-tag">FORMAT</span> The questionnaire will be delivered online, via a link sent to all students through their university email <span class="feature-tag detail">DETAIL</span>. An online questionnaire is suited to this study because Layla wants to reach a large student population quickly and the format allows automatic data collation <span class="feature-tag brief">BRIEF</span>.</li>
+      </ul>
+      <div class="answer-label">Procedural steps (replicable)</div>
+      <div class="procedure-box">
+        <ol>
+          <li>The 12-item online questionnaire is built (10 closed + 1 Likert + 1 open) and an anonymous response link generated.</li>
+          <li>The link is emailed to all enrolled students, with a two-week response window.</li>
+          <li>Closed responses are tabulated automatically; Likert means are calculated; open responses are coded thematically by two independent raters.</li>
+          <li>Findings are summarised in a wellbeing report identifying patterns and barriers to adequate sleep.</li>
+        </ol>
+      </div>
+    </div>
+  </details>
+
+  <details class="exam-example">
+    <summary><span class="difficulty harder">Harder</span>Managers' experience of burnout (semi-structured interview)</summary>
+    <div class="exam-content">
+      <div class="scenario">
+        <strong>Scenario.</strong> Dr Patel is an organisational psychologist studying burnout among middle managers in tech companies. She wants to understand both how widespread it is and the specific situations that managers find most stressful. Plan an <strong>interview</strong> Dr Patel could conduct. Do not describe sample, sampling technique or ethical guidelines.
+      </div>
+      <div class="answer-label">Sample answer (10 marks)</div>
+      <ul class="bullet-answer">
+        <li><span class="feature-tag">QUESTION TYPE</span> The interview will combine closed questions (to give quantitative data on the prevalence of burnout symptoms) with open questions (to explore the situations managers find stressful in their own words) <span class="feature-tag detail">DETAIL</span>. This dual format allows Dr Patel to both quantify burnout and understand the specific workplace contexts behind it <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">EXAMPLES (4)</span> (1) Closed: "In the last month, how often have you felt emotionally exhausted by work? — never / rarely / sometimes / often / always"; (2) Closed Likert: "I feel I am making a positive difference at work — 1 (strongly disagree) to 5 (strongly agree)"; (3) Open: "Can you describe a recent situation at work where you felt overwhelmed?"; (4) Open follow-up: "What, if anything, helped you cope with that situation?"</li>
+        <li><span class="feature-tag">INTERPRETATION</span> Closed questions will be scored numerically (frequency counts, Likert means) <span class="feature-tag detail">DETAIL</span>. Open responses will be transcribed verbatim and analysed using thematic analysis: two researchers will independently code transcripts to identify recurring themes (e.g. "deadline pressure", "lack of autonomy"), then compare coding to establish inter-rater reliability <span class="feature-tag brief">BRIEF</span>. This gives Dr Patel both prevalence data and insight into the precise sources of burnout in tech middle management.</li>
+        <li><span class="feature-tag">FORMAT</span> A semi-structured interview will be used: Dr Patel will follow a fixed list of core questions, but is free to ask additional follow-up questions to clarify or probe interesting answers <span class="feature-tag detail">DETAIL</span>. Semi-structured format is ideal here because it ensures consistency across managers (so prevalence figures are comparable) while still allowing the in-depth, contextual exploration that burnout research requires <span class="feature-tag brief">BRIEF</span>.</li>
+      </ul>
+      <div class="answer-label">Procedural steps (replicable)</div>
+      <div class="procedure-box">
+        <ol>
+          <li>A core question schedule of 10 items (5 closed, 5 open) is finalised, plus a short list of follow-up prompts for the open items.</li>
+          <li>Each interview is conducted face-to-face in a quiet meeting room and audio-recorded, lasting approximately 45 minutes.</li>
+          <li>Recordings are transcribed verbatim; closed responses are tabulated and open responses are coded thematically by two independent raters who then agree on a final coding scheme.</li>
+          <li>Quantitative scores and qualitative themes are integrated to produce a profile of burnout prevalence and its principal workplace triggers.</li>
+        </ol>
+      </div>
+    </div>
+  </details>
+
+  <h3 class="section-mark">Technique 3 — Observational studies</h3>
+
+  <details class="exam-example">
+    <summary><span class="difficulty">Easier</span>Children's playground behaviour (naturalistic observation)</summary>
+    <div class="exam-content">
+      <div class="scenario">
+        <strong>Scenario.</strong> Akello is researching how primary-school children behave during free play. She wants a precise record of which activities they choose and how often they interact with peers, in their normal playground environment. Plan an <strong>observational study</strong> Akello could conduct. Do not describe sample, sampling technique or ethical guidelines.
+      </div>
+      <div class="answer-label">Sample answer (10 marks)</div>
+      <ul class="bullet-answer">
+        <li><span class="feature-tag">COVERT/OVERT</span> The observation will be covert — Akello will watch from a window overlooking the playground rather than being visible to the children <span class="feature-tag detail">DETAIL</span>. Covert observation is appropriate here because young children might alter their behaviour if they noticed an unfamiliar adult watching, reducing the validity of Akello's data on natural play <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">PARTICIPANT/NON-PARTICIPANT</span> Akello will conduct a non-participant observation, recording behaviours from outside the play group rather than joining in <span class="feature-tag detail">DETAIL</span>; this keeps her observations objective and avoids influencing the children's free-play behaviour, which is exactly what she wants to study <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">NATURALISTIC/CONTROLLED</span> The study will be naturalistic — conducted in the children's usual school playground during a normal mid-morning break, with no manipulation of the environment <span class="feature-tag detail">DETAIL</span>. This gives high ecological validity, since Akello wants to know how children <em>actually</em> play in real conditions, not how they behave in an artificial setting <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">STRUCTURED/UNSTRUCTURED</span> A structured observation will be used, with a pre-defined behavioural checklist and event sampling <span class="feature-tag detail">DETAIL</span>. Categories will include "playing alone", "playing in a group of 2–3", "playing in a group of 4+", "running game", "imaginative game", and "sitting/standing still", with a tally each time a behaviour occurs <span class="feature-tag brief">BRIEF</span>. The checklist gives Akello clean quantitative data on what children actually do during free play.</li>
+      </ul>
+      <div class="answer-label">Procedural steps (replicable)</div>
+      <div class="procedure-box">
+        <ol>
+          <li>Akello positions herself at a window overlooking the playground 5 minutes before the morning break.</li>
+          <li>Using event sampling, she tallies each occurrence of the six pre-defined behaviours during a 20-minute observation window.</li>
+          <li>The procedure is repeated on five separate days to build a stable behavioural profile.</li>
+          <li>Frequencies for each category are summed and compared to identify the most common activities and group sizes during free play.</li>
+        </ol>
+      </div>
+    </div>
+  </details>
+
+  <details class="exam-example">
+    <summary><span class="difficulty harder">Harder</span>Café customer queueing behaviour (participant + structured observation)</summary>
+    <div class="exam-content">
+      <div class="scenario">
+        <strong>Scenario.</strong> Diego works in a busy city-centre café. His manager wants to know how customers behave when the queue gets long — whether they are patient, leave without ordering, or complain. Diego has agreed to combine working as a server with collecting data. Plan an <strong>observational study</strong> Diego could conduct. Do not describe sample, sampling technique or ethical guidelines.
+      </div>
+      <div class="answer-label">Sample answer (10 marks)</div>
+      <ul class="bullet-answer">
+        <li><span class="feature-tag">COVERT/OVERT</span> The observation will be covert — customers will not be told they are being observed for a study, since Diego is appearing to them as a normal café server <span class="feature-tag detail">DETAIL</span>. Covert observation is appropriate because if customers knew they were being watched, they may behave more politely than usual, masking the real queueing behaviour the manager wants to understand <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">PARTICIPANT/NON-PARTICIPANT</span> Diego will conduct a participant observation — he will continue working as a server while recording behaviour, embedded within the café environment <span class="feature-tag detail">DETAIL</span>. This is essential here because his manager has asked him to use his existing role; it also gives him a unique vantage point to observe both the front and back of the queue <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">NATURALISTIC/CONTROLLED</span> The setting is naturalistic — Diego will observe customers in the actual café during normal trading hours, with no changes to the environment, prices or service <span class="feature-tag detail">DETAIL</span>; this gives the manager high ecological validity, since the data reflect customer behaviour in genuinely busy conditions rather than a contrived setup <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">STRUCTURED/UNSTRUCTURED</span> A structured observation with a behavioural checklist and time sampling will be used. Diego will tally behaviours every 5 minutes during the lunch rush <span class="feature-tag detail">DETAIL</span>. Categories will include: "customer waits patiently", "customer checks watch/phone", "customer sighs or rolls eyes", "customer complains verbally", and "customer leaves the queue without ordering" <span class="feature-tag brief">BRIEF</span>. The structured checklist with time sampling gives the manager objective frequency data that can be linked to queue length.</li>
+      </ul>
+      <div class="answer-label">Procedural steps (replicable)</div>
+      <div class="procedure-box">
+        <ol>
+          <li>Diego prepares a tally sheet with the five behavioural categories and a column for queue length, kept beside the till.</li>
+          <li>During the 12 p.m.–2 p.m. lunch rush, every 5 minutes he records (a) the current queue length and (b) the number of each category of behaviour observed in the previous 5 minutes.</li>
+          <li>This is repeated on five working days to build a representative dataset.</li>
+          <li>Behaviour frequencies are cross-tabulated with queue length to identify the threshold at which patience deteriorates and customers walk away.</li>
+        </ol>
+      </div>
+    </div>
+  </details>
+
+  <h3 class="section-mark">Technique 4 — Correlational studies</h3>
+
+  <details class="exam-example">
+    <summary><span class="difficulty">Easier</span>Screen time and sleep quality (correlation)</summary>
+    <div class="exam-content">
+      <div class="scenario">
+        <strong>Scenario.</strong> Bashar is a sleep researcher who suspects that the more time teenagers spend on screens before bed, the worse they sleep. He cannot ethically force teenagers to use more or less screen time, so he plans to measure their existing habits. Plan a <strong>correlational study</strong> Bashar could conduct. Do not describe sample, sampling technique or ethical guidelines.
+      </div>
+      <div class="answer-label">Sample answer (10 marks)</div>
+      <ul class="bullet-answer">
+        <li><span class="feature-tag">CO-VARIABLES</span> The two co-variables will be (1) the amount of evening screen time and (2) self-reported sleep quality <span class="feature-tag detail">DETAIL</span>. Both are measured rather than manipulated, which suits Bashar's situation since he cannot ethically alter teenagers' actual screen habits <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">CO-VARIABLE 1</span> Evening screen time will be operationalised as the average number of minutes spent on a phone or tablet between 8 p.m. and bedtime, recorded by the device's built-in screen-time tracker over a 7-day period and averaged <span class="feature-tag detail">DETAIL</span>. This gives Bashar an objective measure of each teenager's actual evening screen exposure <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">CO-VARIABLE 2</span> Sleep quality will be operationalised as a teenager's score on the 19-item Pittsburgh Sleep Quality Index, completed at the end of the 7-day period <span class="feature-tag detail">DETAIL</span>; PSQI scores range from 0 to 21, with higher scores indicating worse sleep quality, giving Bashar a standardised, validated measure <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">GRAPH + DIRECTIONAL HYPOTHESIS</span> A scatter graph will be plotted with mean evening screen time (minutes) on the x-axis and PSQI score on the y-axis, with each dot representing one teenager <span class="feature-tag detail">DETAIL</span>. Bashar's directional (one-tailed) hypothesis is: <em>"There will be a positive correlation between evening screen time and PSQI scores, such that teenagers with more evening screen time will have higher (worse) PSQI scores."</em> A positive correlation would appear on the scatter graph as points trending from the bottom-left to the top-right <span class="feature-tag brief">BRIEF</span>.</li>
+      </ul>
+      <div class="answer-label">Procedural steps (replicable)</div>
+      <div class="procedure-box">
+        <ol>
+          <li>Each teenager's phone/tablet screen-time tracker is set to log minutes between 8 p.m. and 12 a.m. for 7 consecutive days.</li>
+          <li>At the end of the 7 days, each teenager completes the standardised PSQI questionnaire under quiet conditions.</li>
+          <li>Each participant's mean evening screen time and total PSQI score are paired into a single dataset.</li>
+          <li>The two co-variables are plotted on a scatter graph and examined for direction and strength of correlation.</li>
+        </ol>
+      </div>
+    </div>
+  </details>
+
+  <details class="exam-example">
+    <summary><span class="difficulty harder">Harder</span>Empathy and pro-social behaviour (correlation)</summary>
+    <div class="exam-content">
+      <div class="scenario">
+        <strong>Scenario.</strong> Dr Romero is a social psychologist who wants to investigate whether people who score higher on empathy also help strangers more often. She will measure adult volunteers on both a personality test and a behavioural task. Plan a <strong>correlational study</strong> Dr Romero could conduct. Do not describe sample, sampling technique or ethical guidelines.
+      </div>
+      <div class="answer-label">Sample answer (10 marks)</div>
+      <ul class="bullet-answer">
+        <li><span class="feature-tag">CO-VARIABLES</span> The two co-variables will be (1) self-reported empathy and (2) helping behaviour towards strangers in a structured task <span class="feature-tag detail">DETAIL</span>. Neither variable is manipulated — both are measured for each participant — which makes a correlation appropriate, especially because empathy is a stable trait that cannot ethically be manipulated <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">CO-VARIABLE 1</span> Empathy will be operationalised as a participant's total score on the 28-item Interpersonal Reactivity Index (IRI), with each item rated on a 5-point Likert scale, giving a final score ranging from 0 to 112 <span class="feature-tag detail">DETAIL</span>. The IRI is a standardised psychometric measure of trait empathy, giving Dr Romero a reliable comparison across participants <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">CO-VARIABLE 2</span> Helping behaviour will be operationalised as the number of times (out of five staged opportunities) a participant offers help to a confederate posing as a stranger in need (e.g. dropping papers, asking for directions, requesting to use a phone) within a 30-minute walk through a city centre <span class="feature-tag detail">DETAIL</span>; scores range from 0 to 5, giving Dr Romero a precise behavioural index of stranger-directed helping <span class="feature-tag brief">BRIEF</span>.</li>
+        <li><span class="feature-tag">GRAPH + DIRECTIONAL HYPOTHESIS</span> A scatter graph will be plotted with IRI score (0–112) on the x-axis and number of helping acts (0–5) on the y-axis, each dot representing one participant <span class="feature-tag detail">DETAIL</span>. Dr Romero's directional (one-tailed) hypothesis is: <em>"There will be a positive correlation between IRI scores and the number of helping acts, such that participants with higher empathy scores will help on more occasions."</em> A positive correlation would appear on the scatter as points trending from bottom-left to top-right <span class="feature-tag brief">BRIEF</span>.</li>
+      </ul>
+      <div class="answer-label">Procedural steps (replicable)</div>
+      <div class="procedure-box">
+        <ol>
+          <li>Each participant individually completes the 28-item IRI in a quiet office and their total score is recorded.</li>
+          <li>The participant is then asked to walk a fixed 30-minute route through the city centre with a researcher, supposedly to "discuss city navigation".</li>
+          <li>Along the route, five confederates approach the participant at pre-arranged points, each presenting a brief opportunity to help; whether the participant helps (yes/no) is recorded discreetly by the researcher.</li>
+          <li>Each participant's IRI score is paired with their helping score (0–5), and the pairs are plotted on a scatter graph to assess direction and strength of correlation.</li>
+        </ol>
+      </div>
+    </div>
+  </details>
+</div>
+
+
+<!-- ============================================================
+     PAGE: ETHICS
+     ============================================================ -->
+<div class="page" id="page-ethics">
+  <div class="page-header">
+    <div class="ch-num">V</div>
+    <div>
+      <h2>Ethical guidelines</h2>
+      <div class="ch-tagline">Two sets you must know — for human participants (BPS Code of Human Research Ethics, 2014) and for animals (BPS guidelines, 2012).</div>
+    </div>
+  </div>
+
+  <h3 class="section-mark">Human participants</h3>
+  <p>The 9990 syllabus lists seven guidelines you should be able to describe, evaluate against real studies, and apply to novel scenarios.</p>
+
+  <div class="ethics-grid">
+    <div class="ethic-card"><div class="icon">1</div><h5>Minimising harm</h5><p>Participants should not face physical or psychological risk greater than they would meet in everyday life. Researchers should also maximise benefits to participants and wider society.</p></div>
+    <div class="ethic-card"><div class="icon">2</div><h5>Valid (informed) consent</h5><p>Participants must know enough about the study — its aim, procedure, and any risks — to make a genuine decision about whether to take part. Parental consent is needed for participants under 16.</p></div>
+    <div class="ethic-card"><div class="icon">3</div><h5>Right to withdraw</h5><p>Participants must know they can leave the study at any point — and remove their data afterwards — without penalty.</p></div>
+    <div class="ethic-card"><div class="icon">4</div><h5>Lack of deception</h5><p>Participants should not be deliberately misled about the aim or procedure. Where some deception is unavoidable, it must be minimal and the participants must be fully debriefed.</p></div>
+    <div class="ethic-card"><div class="icon">5</div><h5>Confidentiality</h5><p>Personal data and individual results must be kept securely and not shared outside the research team. Real names are usually replaced with codes or initials.</p></div>
+    <div class="ethic-card"><div class="icon">6</div><h5>Privacy</h5><p>The participant's personal physical and psychological space should not be invaded. Observations in private settings, for instance, are normally not acceptable.</p></div>
+    <div class="ethic-card"><div class="icon">7</div><h5>Debriefing</h5><p>At the end of the study, participants receive a full explanation of the aims and any deception used, and leave in the same psychological state in which they arrived.</p></div>
+  </div>
+
+  <h3 class="section-mark">Animal participants</h3>
+  <p>For animal research, the 9990 syllabus expects you to know the following guidelines (based on the BPS guidelines for psychologists working with animals, 2012).</p>
+
+  <div class="ethics-grid">
+    <div class="ethic-card"><div class="icon">1</div><h5>Minimising harm</h5><p>Researchers must minimise harm to animals while maximising the benefits that flow from the research. A cost–benefit analysis is required.</p></div>
+    <div class="ethic-card"><div class="icon">2</div><h5>Replacement</h5><p>Wherever possible, animal experiments should be replaced with non-animal alternatives such as videos, simulations, or studies of human participants.</p></div>
+    <div class="ethic-card"><div class="icon">3</div><h5>Species &amp; strain</h5><p>Researchers should choose a species and strain that is scientifically and ethically appropriate, and consider the animal's previous experience and welfare needs.</p></div>
+    <div class="ethic-card"><div class="icon">4</div><h5>Numbers</h5><p>Use the smallest number of animals consistent with valid results — calculated from pilot studies and statistical analysis, in line with the Animal Scientific Procedures Act (1986).</p></div>
+    <div class="ethic-card"><div class="icon">5</div><h5>Procedures: pain &amp; distress</h5><p>Procedures likely to cause pain, suffering or distress must be carefully justified, performed under anaesthesia where applicable, and any adverse effects assessed and acted on immediately.</p></div>
+    <div class="ethic-card"><div class="icon">6</div><h5>Procedures: housing</h5><p>Caging must mirror important features of the natural environment and respect the social behaviour of the species. Isolation and crowding should be avoided.</p></div>
+    <div class="ethic-card"><div class="icon">7</div><h5>Procedures: reward, deprivation &amp; aversive stimuli</h5><p>The animal's natural eating and drinking habits should be respected; deprivation and aversive stimuli should be no greater than is necessary to achieve the research aims, and only used when no alternative motivator exists.</p></div>
+  </div>
+
+  <div class="pro-tip">
+    <strong>Linking to studies</strong>
+    Examiners often ask you to apply ethics to a named core study. Useful pairings: Milgram (deception, protection from harm); Bandura (children, lack of consent, exposure to aggression); Hassett (animal research — housing, species choice); Piliavin (covert field experiment — no consent or debrief).
+  </div>
+</div>
+
+<!-- ============================================================
+     PAGE: DEBATES
+     ============================================================ -->
+<div class="page" id="page-debates">
+  <div class="page-header">
+    <div class="ch-num">VI</div>
+    <div>
+      <h2>AS-level Issues &amp; Debates</h2>
+      <div class="ch-tagline">For each core study you should be able to discuss how it relates to the five issues and debates listed in the 9990 syllabus.</div>
+    </div>
+  </div>
+
+  <p>These five debates are explicitly named in the syllabus (page 15) and the Hodder Study and Revision Guide. Examiners reward answers that pick a clear position, support it with evidence from a study, and acknowledge a counter-point.</p>
+
+  <div class="debate-card">
+    <h4>1. The application of psychology to everyday life</h4>
+    <div class="definition-box">The practical use of a theory or research findings to improve processes or people's lives — for example, in physical or mental health, education, safety, or workplace productivity.</div>
+    <p><strong>How to argue it:</strong> identify a real-world implication of the study's findings. Useful linking studies: Andrade's doodling research informs classroom note-taking; Pozzulo et al. on line-ups informs police identification procedures; Saavedra and Silverman on button phobia informs phobia treatment.</p>
+    <p><strong>Tension:</strong> studies that produce highly applicable findings are often field-based, which can compromise control; studies high in control are often laboratory-based, which can compromise ecological validity. Real-world application requires both.</p>
+  </div>
+
+  <div class="debate-card">
+    <h4>2. Individual and situational explanations</h4>
+    <div class="definition-box">The extent to which a person's behaviour is controlled by factors unique to them (personality, physiology — <em>individual</em>) or by factors in the situation (the people, place, or social pressures present — <em>situational</em>).</div>
+    <p><strong>How to argue it:</strong> identify whether the study explains behaviour using internal traits or external context. Milgram's obedience study is a classic situational explanation — ordinary people obeyed because of the authority figure and setting, not because of a "cruel personality".</p>
+    <p><strong>Tension:</strong> behaviour is usually a product of <em>both</em>. Even Milgram's study shows individual variation (some participants refused), and even strongly individual explanations (like phobias) involve situational triggers.</p>
+  </div>
+
+  <div class="debate-card">
+    <h4>3. Nature versus nurture</h4>
+    <div class="definition-box">The extent to which behaviour, feelings or thinking results from innate genetic factors (<em>nature</em>) versus environmental influences such as learning and other people (<em>nurture</em>).</div>
+    <p><strong>How to argue it:</strong> identify whether the study attributes behaviour to biology or to environmental experience. Hassett et al.'s monkey toy preferences study supports a nature explanation for sex-typed play; Bandura's Bobo doll study supports a nurture explanation for aggression.</p>
+    <p><strong>Tension:</strong> the two interact. Even strongly biological behaviours unfold through experience, and even strongly learned behaviours are constrained by biology. Saying "purely nature" can also be socially sensitive when applied to human group differences.</p>
+  </div>
+
+  <div class="debate-card">
+    <h4>4. The use of children in psychological research</h4>
+    <div class="definition-box">The ethical and practical considerations involved when participants are under 16 — most importantly, the need for parental consent, age-appropriate language, and a thorough risk assessment.</div>
+    <p><strong>How to argue it:</strong> children give us insights we cannot get from adults (e.g. Bandura on social learning, Pozzulo on eyewitness memory, Saavedra and Silverman on phobia) — but children also cannot give fully informed consent themselves and may be more vulnerable to harm.</p>
+    <p><strong>Tension:</strong> excluding children from research means we cannot understand or improve children's lives; including them means accepting heightened ethical responsibility.</p>
+  </div>
+
+  <div class="debate-card">
+    <h4>5. The use of animals in psychological research</h4>
+    <div class="definition-box">The ethical and scientific considerations involved when research uses non-human animals — covered in detail by the BPS animal-research guidelines (replacement, species, numbers, procedures).</div>
+    <p><strong>How to argue it:</strong> animal studies (e.g. Hassett et al. on monkeys, Fagen et al. on elephants) can answer questions we cannot ethically ask of humans, can use simpler nervous systems to model basic processes, and can use longitudinal designs across an animal's lifespan. But generalising from animals to humans is uncertain, and animals cannot give consent.</p>
+    <p><strong>Tension:</strong> the more biologically similar the animal (e.g. primates), the better the generalisation — but also the greater the ethical concern. The BPS 3Rs (Replacement, Reduction, Refinement) are central.</p>
+  </div>
+
+  <div class="pro-tip">
+    <strong>Structure for a debate question</strong>
+    A clean structure: (1) define the debate in your own words; (2) name the side the study sits on, with evidence; (3) acknowledge a counter-argument or interaction with the other side; (4) reach a brief conclusion that does not over-claim.
+  </div>
+</div>
+
+<footer>
+  Compiled from the Cambridge 9990 Syllabus (2024–2026), Hodder Cambridge International AS &amp; A Level Psychology Study and Revision Guide (3rd ed., 2023), the ZNotes methodology summary, and the VinSchool 10-marker rubric.
+</footer>
+
+
+<script>
+/* =========================================================
+   PAGE NAVIGATION
+   ========================================================= */
+const navButtons = document.querySelectorAll('#mainNav button');
+const pages = document.querySelectorAll('.page');
+
+function goToPage(pageId) {
+  pages.forEach(p => p.classList.toggle('active', p.id === 'page-' + pageId));
+  navButtons.forEach(b => b.classList.toggle('active', b.dataset.page === pageId));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+navButtons.forEach(btn => {
+  btn.addEventListener('click', () => goToPage(btn.dataset.page));
+});
+
+document.querySelectorAll('.section-card').forEach(card => {
+  card.addEventListener('click', () => goToPage(card.dataset.goto));
+});
+
+/* =========================================================
+   FLASHCARD DATA
+   Categories: methods | concepts | data | ethics | debates
+   ========================================================= */
+const flashcards = [
+  // ============ RESEARCH METHODS ============
+  {term: "Experiment", category: "methods", definition: "An investigation looking for a <strong>causal relationship</strong>, in which an independent variable (IV) is manipulated and is expected to be responsible for changes in the dependent variable (DV)."},
+  {term: "Laboratory experiment", category: "methods", definition: "An experiment conducted in a controlled, often artificial setting where the experimenter has a high level of control over the IV and extraneous variables, allowing strong cause-and-effect conclusions."},
+  {term: "Field experiment", category: "methods", definition: "An experiment conducted in the participant's natural environment for the behaviour being studied. The IV is still manipulated, but situational variables are harder to control."},
+  {term: "Experimental condition", category: "methods", definition: "One or more situations in an experiment that represent different levels of the IV. They are compared with one another or with the control condition."},
+  {term: "Control condition", category: "methods", definition: "A situation in which the IV is absent (or set to a baseline level), used as a comparison for the experimental condition(s)."},
+  {term: "Randomised controlled trial (RCT)", category: "methods", definition: "An experiment in which participants are randomly allocated to either an experimental (intervention) or a control group, used especially in clinical research to test treatments."},
+  {term: "Self-report", category: "methods", definition: "A research method where participants directly provide information about themselves, usually via a questionnaire or interview."},
+  {term: "Questionnaire", category: "methods", definition: "A research method using mainly written questions to gain information from participants, delivered in paper-and-pencil or online form."},
+  {term: "Interview", category: "methods", definition: "A research method using verbal questions asked directly to participants, conducted face-to-face or by telephone."},
+  {term: "Structured interview", category: "methods", definition: "An interview with a fixed list of questions in a fixed order, often scripted; consistency may also be required in the interviewer's posture and tone, making it highly standardised."},
+  {term: "Semi-structured interview", category: "methods", definition: "An interview with a fixed list of core questions, but where the interviewer is free to add follow-up questions to clarify or probe interesting answers."},
+  {term: "Unstructured interview", category: "methods", definition: "An interview in which most questions depend on the respondent's previous answers; only a list of topics may be set in advance."},
+  {term: "Open question", category: "methods", definition: "A question that allows the participant to respond in their own words, with no fixed options. Produces rich qualitative data."},
+  {term: "Closed question", category: "methods", definition: "A question with a fixed set of response options (e.g. yes/no, multiple choice, Likert scale). Produces quantitative data that is easy to compare."},
+  {term: "Likert scale", category: "methods", definition: "A closed-question format in which respondents indicate level of agreement or feeling on a numbered scale (typically 1–5 or 1–7), e.g. strongly disagree to strongly agree."},
+  {term: "Rating scale", category: "methods", definition: "A closed-question format in which respondents represent their answer numerically along a scale (e.g. 1–10), often used to rate intensity or preference."},
+  {term: "Observation", category: "methods", definition: "A research method that involves watching and recording human or animal behaviour."},
+  {term: "Overt observation", category: "methods", definition: "Participants know who the researcher is and that they are being observed."},
+  {term: "Covert observation", category: "methods", definition: "The researcher's identity or activity is hidden from participants — they do not know they are being observed."},
+  {term: "Participant observation", category: "methods", definition: "The observer joins and watches from inside the social setting of the participants."},
+  {term: "Non-participant observation", category: "methods", definition: "The observer remains outside the situation being studied, watching without taking part."},
+  {term: "Naturalistic observation", category: "methods", definition: "Behaviour is watched in the participants' usual environment without interference from the researcher."},
+  {term: "Controlled observation", category: "methods", definition: "Behaviour is watched in a setting where the researcher has manipulated some aspects of the social or physical environment."},
+  {term: "Structured observation", category: "methods", definition: "Only a limited, pre-defined range of behaviours is recorded, typically using a behavioural checklist."},
+  {term: "Unstructured observation", category: "methods", definition: "A wide range of behaviours is recorded, often as a pilot to refine which behavioural categories will later be used."},
+  {term: "Behavioural checklist", category: "methods", definition: "A pre-defined list of behavioural categories used in structured observations to record when each behaviour occurs."},
+  {term: "Event sampling", category: "methods", definition: "An observation technique in which the observer records every occurrence of a behaviour from the checklist throughout the observation period."},
+  {term: "Time sampling", category: "methods", definition: "An observation technique in which the observer records which behaviours are occurring at fixed time intervals (e.g. every 30 seconds)."},
+  {term: "Correlation", category: "methods", definition: "A statistical technique that measures the relationship between two co-variables. Neither variable is manipulated; both are measured. Correlation does <strong>not</strong> imply causation."},
+  {term: "Co-variable", category: "methods", definition: "One of the two measured variables in a correlational study (also sometimes called the measured variables)."},
+  {term: "Positive correlation", category: "methods", definition: "A relationship in which an increase in one variable is associated with an increase in the other."},
+  {term: "Negative correlation", category: "methods", definition: "A relationship in which an increase in one variable is associated with a decrease in the other."},
+  {term: "Strength of correlation", category: "methods", definition: "How closely the data points fit a line — strong correlations have points clustered tightly along a trend; weak correlations have a more scattered pattern."},
+  {term: "Case study", category: "methods", definition: "A detailed investigation of a single participant or unit (e.g. one person, family or institution), producing rich, in-depth data specific to that case."},
+  {term: "Longitudinal study", category: "methods", definition: "A study that collects data from the same participants on more than one occasion, often over months or years, to track changes over time. Can use any research method."},
+
+  // ============ METHODOLOGICAL CONCEPTS ============
+  {term: "Aim", category: "concepts", definition: "A statement of the purpose of an investigation, usually expressed as what the study intends to show. Written before the study and does not predict the outcome."},
+  {term: "Hypothesis", category: "concepts", definition: "A testable statement predicting either a difference between IV levels (in an experiment) or a relationship between variables (in a correlation)."},
+  {term: "Alternative hypothesis", category: "concepts", definition: "The testable statement that predicts a specific difference or relationship between variables in a study."},
+  {term: "Directional (one-tailed) hypothesis", category: "concepts", definition: "A hypothesis that predicts the <em>direction</em> of a difference or relationship — e.g. 'group A will score higher than group B'."},
+  {term: "Non-directional (two-tailed) hypothesis", category: "concepts", definition: "A hypothesis that predicts only that there will be a difference or relationship, without specifying its direction."},
+  {term: "Null hypothesis", category: "concepts", definition: "A statement that any difference or correlation in the results is due to chance — i.e. there is no real effect of the IV or relationship between variables."},
+  {term: "Independent variable (IV)", category: "concepts", definition: "The factor under investigation in an experiment, manipulated to create two or more conditions, and expected to be responsible for changes in the DV."},
+  {term: "Dependent variable (DV)", category: "concepts", definition: "The factor measured in an experiment, expected to change under the influence of the IV."},
+  {term: "Operationalisation", category: "concepts", definition: "Defining a variable so that it can be precisely manipulated, measured, or quantified — and so that the study can be replicated. E.g. 'aggression' becomes 'number of times a child hits the Bobo doll in 10 minutes'."},
+  {term: "Independent measures design", category: "concepts", definition: "An experimental design in which a different group of participants is used for each level of the IV. Required when the IV is naturally occurring."},
+  {term: "Repeated measures design", category: "concepts", definition: "An experimental design in which all participants take part in every level of the IV. Removes participant variables but introduces order effects."},
+  {term: "Matched pairs design", category: "concepts", definition: "An experimental design in which participants are arranged in pairs, matched on important characteristics (e.g. age, IQ); one member of each pair is allocated to each IV level."},
+  {term: "Counterbalancing", category: "concepts", definition: "A technique used in repeated measures designs (often called ABBA design) where the order of conditions is varied across participants to control for order effects."},
+  {term: "Random allocation", category: "concepts", definition: "Assigning participants to experimental conditions using a random method (e.g. random number generator), so that participant variables are evenly distributed."},
+  {term: "Order effects", category: "concepts", definition: "Changes in performance due to the order in which conditions are completed — typically <em>practice</em> (improvement) or <em>fatigue</em> (decline)."},
+  {term: "Extraneous variable", category: "concepts", definition: "A variable other than the IV that may affect the DV. If random across conditions it adds 'noise'; if systematic, it becomes a confounding variable."},
+  {term: "Confounding variable", category: "concepts", definition: "An extraneous variable that varies systematically with the IV, making it impossible to know whether the IV or the confounder caused the change in the DV."},
+  {term: "Situational variable", category: "concepts", definition: "A confounding variable caused by something in the environment (e.g. lighting, temperature, time of day)."},
+  {term: "Participant variable", category: "concepts", definition: "A confounding variable caused by individual differences between participants (e.g. age, intelligence, personality)."},
+  {term: "Control / standardisation", category: "concepts", definition: "Keeping potential extraneous variables constant across conditions to ensure that any difference in the DV is due to the IV. Helps secure both validity and reliability."},
+
+  // ============ DATA, SAMPLING, VALIDITY & RELIABILITY ============
+  {term: "Quantitative data", category: "data", definition: "Numerical data about the quantity of a psychological measure (e.g. test scores, reaction times). Allows easy statistical comparison but loses depth of meaning."},
+  {term: "Qualitative data", category: "data", definition: "Descriptive, in-depth data about the quality of a psychological characteristic (e.g. interview transcripts, open responses). Rich in meaning but harder to compare."},
+  {term: "Objective data", category: "data", definition: "Data that is unbiased by the researcher's personal feelings or beliefs and would be recorded the same way by any researcher."},
+  {term: "Subjective data", category: "data", definition: "Data that is influenced by personal feelings, beliefs or interpretation, and may differ between researchers — typical of qualitative analysis."},
+  {term: "Population", category: "data", definition: "The wider group from which a sample is drawn — the people the researcher wants to be able to generalise findings about."},
+  {term: "Sample", category: "data", definition: "The group of participants actually selected to take part in a study, intended to represent the population."},
+  {term: "Sampling technique", category: "data", definition: "The method used to select participants for a study from the wider population."},
+  {term: "Opportunity sampling", category: "data", definition: "Selecting participants who are available at the time and place of the research. Quick and easy but rarely representative."},
+  {term: "Random sampling", category: "data", definition: "Every member of the population is given an equal chance of being selected, e.g. by computer-generated number list. Most representative in theory, but logistically demanding."},
+  {term: "Volunteer (self-selecting) sampling", category: "data", definition: "Participants invite themselves into the study, e.g. by responding to an advert. Drop-out tends to be lower, but the sample may be biased toward a certain type of person."},
+  {term: "Validity", category: "data", definition: "The extent to which a study measures what it claims to measure."},
+  {term: "Internal validity", category: "data", definition: "How well an experiment controls confounding variables, so the researcher can be confident that the IV (and only the IV) caused the change in the DV."},
+  {term: "Ecological validity", category: "data", definition: "The extent to which findings from one setting generalise to other settings — including everyday life. Influenced by how realistic the setting and task are."},
+  {term: "Mundane realism", category: "data", definition: "How closely the experimental task resembles tasks found in real-world situations."},
+  {term: "Face validity", category: "data", definition: "Whether a measure 'looks like' it tests what it claims to — judged by surface inspection."},
+  {term: "Concurrent validity", category: "data", definition: "Whether a new measure correlates well with an established, already-validated measure of the same construct."},
+  {term: "Generalisability", category: "data", definition: "The extent to which findings apply beyond the specific sample and setting of the study to other people, places, or times."},
+  {term: "Demand characteristics", category: "data", definition: "Features of a study that give away its aim, causing participants to change their behaviour and reducing validity."},
+  {term: "Objectivity", category: "data", definition: "An unbiased viewpoint not affected by personal feelings or beliefs — should be consistent across researchers, increasing validity."},
+  {term: "Subjectivity", category: "data", definition: "A personal viewpoint potentially biased by feelings or beliefs, which may differ between researchers and reduce validity."},
+  {term: "Reliability", category: "data", definition: "The consistency of a procedure, task or measure — whether it produces the same results when repeated."},
+  {term: "Internal reliability", category: "data", definition: "Whether the procedures within a study are standardised so that each participant has the same experience."},
+  {term: "External reliability", category: "data", definition: "Whether the results of a study can be replicated on different occasions and produce consistent findings."},
+  {term: "Inter-rater / inter-observer reliability", category: "data", definition: "The extent to which two researchers analysing the same data (e.g. interview transcripts or observational records) produce the same scores or codings."},
+  {term: "Test–retest reliability", category: "data", definition: "Consistency tested by giving the same task to the same participants on two occasions and comparing the results."},
+  {term: "Split-half method", category: "data", definition: "A reliability test in which results from the first half of a questionnaire are compared with results from the second half (with similar items) to check internal consistency."},
+  {term: "Replicability", category: "data", definition: "The extent to which a study can be repeated by other researchers using the same procedure to test whether findings are reliable."},
+  {term: "Standardisation", category: "data", definition: "Making sure the procedure (instructions, materials, environment) is identical for every participant — supports both internal reliability and replicability."},
+  {term: "Mean", category: "data", definition: "A measure of central tendency calculated by adding all scores and dividing by the number of scores. Affected by extreme values."},
+  {term: "Median", category: "data", definition: "A measure of central tendency: the middle value when scores are arranged in order. Less affected by extreme values than the mean."},
+  {term: "Mode", category: "data", definition: "A measure of central tendency: the most frequently occurring score in a dataset."},
+  {term: "Range", category: "data", definition: "A measure of spread calculated as the difference between the highest and lowest scores, plus 1."},
+  {term: "Standard deviation", category: "data", definition: "A measure of spread showing the average distance of each score from the mean. Higher SD = more spread; lower SD = scores clustered near the mean."},
+  {term: "Normal distribution", category: "data", definition: "A symmetrical, bell-shaped distribution of scores in which mean, median, and mode are equal."},
+  {term: "Bar chart", category: "data", definition: "A graph with separated bars used to display data in discrete categories. Gaps between bars show the data is not continuous."},
+  {term: "Histogram", category: "data", definition: "A graph used to display continuous data, with no gaps between adjacent bars, where the area of each bar represents frequency."},
+  {term: "Scatter graph", category: "data", definition: "A graph used to display data from a correlational analysis, with each dot representing one participant's score on the two co-variables."},
+
+  // ============ ETHICS ============
+  {term: "Ethical issues", category: "ethics", definition: "Problems in research that raise concerns about the welfare of participants — e.g. potential harm, deception, lack of consent."},
+  {term: "Ethical guidelines", category: "ethics", definition: "Rules of advice (e.g. from the BPS) that guide psychologists to consider the welfare of participants and wider society."},
+  {term: "Informed consent", category: "ethics", definition: "Participants must know enough about the study to decide whether to take part. Includes the aim, procedure, risks, and right to withdraw."},
+  {term: "Right to withdraw", category: "ethics", definition: "Participants must know they can leave the study at any time and remove their data, without penalty."},
+  {term: "Deception", category: "ethics", definition: "Misleading participants about the aim or procedure of a study. Should be avoided where possible; where unavoidable, must be minimal and followed by debriefing."},
+  {term: "Debriefing", category: "ethics", definition: "An end-of-study procedure in which participants receive a full explanation of the aims and any deception, and leave in the same psychological state in which they arrived."},
+  {term: "Confidentiality", category: "ethics", definition: "Participants' personal information and individual results are kept securely and not released outside the study."},
+  {term: "Privacy", category: "ethics", definition: "Avoiding invasion of a participant's personal physical or psychological space — observation in private settings is normally not acceptable."},
+  {term: "Protection from harm", category: "ethics", definition: "Participants should not face physical or psychological risk greater than they would meet in everyday life."},
+  {term: "Replacement (animal research)", category: "ethics", definition: "Where possible, animal research should be replaced with non-animal alternatives such as videos, simulations, or human studies."},
+  {term: "3Rs (animal research)", category: "ethics", definition: "Replacement, Reduction, and Refinement — the guiding ethical principles for using animals in research."},
+
+  // ============ ISSUES & DEBATES ============
+  {term: "Application of psychology to everyday life", category: "debates", definition: "The practical use of a theory or research findings to improve processes or people's lives — e.g. in health, education, safety, or workplaces."},
+  {term: "Individual explanation", category: "debates", definition: "An explanation of behaviour rooted in factors unique to the person — their personality, biology, or cognitive style."},
+  {term: "Situational explanation", category: "debates", definition: "An explanation of behaviour rooted in the context — the people, place, or social pressures present at the time."},
+  {term: "Nature", category: "debates", definition: "The view that behaviour, feelings, or thinking arise from innate genetic, biological, or evolutionary factors."},
+  {term: "Nurture", category: "debates", definition: "The view that behaviour, feelings, or thinking arise from environmental influences — learning, upbringing, culture, and other people."},
+  {term: "Use of children in research", category: "debates", definition: "The set of ethical and practical considerations that apply when participants are under 16 — including parental consent, age-appropriate language, and additional risk assessment."},
+  {term: "Use of animals in research", category: "debates", definition: "The ethical and scientific considerations involved when research uses non-human animals — covered by BPS guidelines on replacement, species, numbers, and procedures."}
+];
+
+/* =========================================================
+   QUIZLET-STYLE FLASHCARD SYSTEM
+   ========================================================= */
+const quizCard = document.getElementById('quizCard');
+const quizTerm = document.getElementById('quizTerm');
+const quizDefinition = document.getElementById('quizDefinition');
+const quizCategoryFront = document.getElementById('quizCategoryFront');
+const quizCategoryBack = document.getElementById('quizCategoryBack');
+const quizCurrent = document.getElementById('quizCurrent');
+const quizTotal = document.getElementById('quizTotal');
+const quizBarFill = document.getElementById('quizBarFill');
+const quizPrev = document.getElementById('quizPrev');
+const quizNext = document.getElementById('quizNext');
+const quizFlip = document.getElementById('quizFlip');
+const quizShuffle = document.getElementById('quizShuffle');
+const quizReset = document.getElementById('quizReset');
+const quizSearch = document.getElementById('cardSearch');
+const quizEmpty = document.getElementById('quizEmpty');
+const quizStage = document.getElementById('quizStage');
+const filterChips = document.querySelectorAll('.filter-chip');
+
+let workingDeck = [...flashcards];
+let currentIndex = 0;
+let activeFilter = 'all';
+
+function applyFilters() {
+  const query = quizSearch.value.trim().toLowerCase();
+  workingDeck = flashcards.filter(card => {
+    const matchesFilter = activeFilter === 'all' || card.category === activeFilter;
+    const matchesQuery = !query
+      || card.term.toLowerCase().includes(query)
+      || card.definition.toLowerCase().includes(query);
+    return matchesFilter && matchesQuery;
+  });
+  currentIndex = 0;
+  renderCard();
+}
+
+function renderCard() {
+  if (workingDeck.length === 0) {
+    quizStage.style.display = 'none';
+    quizEmpty.style.display = 'block';
+    quizCurrent.textContent = '0';
+    quizTotal.textContent = '0';
+    quizBarFill.style.width = '0%';
+    quizPrev.disabled = true;
+    quizNext.disabled = true;
+    quizFlip.disabled = true;
+    return;
+  }
+  quizStage.style.display = '';
+  quizEmpty.style.display = 'none';
+  quizFlip.disabled = false;
+
+  const card = workingDeck[currentIndex];
+  // Always reset to front face when navigating
+  quizCard.classList.remove('flipped');
+  // Brief delay so the flip-back animation completes before content swaps
+  setTimeout(() => {
+    quizTerm.innerHTML = card.term;
+    quizDefinition.innerHTML = card.definition;
+    quizCategoryFront.textContent = card.category;
+    quizCategoryBack.textContent = card.category;
+  }, 50);
+
+  quizCurrent.textContent = currentIndex + 1;
+  quizTotal.textContent = workingDeck.length;
+  const pct = ((currentIndex + 1) / workingDeck.length) * 100;
+  quizBarFill.style.width = pct + '%';
+  quizPrev.disabled = currentIndex === 0;
+  quizNext.disabled = currentIndex === workingDeck.length - 1;
+}
+
+function flipCard() {
+  if (workingDeck.length === 0) return;
+  quizCard.classList.toggle('flipped');
+}
+
+function nextCard() {
+  if (currentIndex < workingDeck.length - 1) {
+    currentIndex++;
+    renderCard();
+  }
+}
+
+function prevCard() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    renderCard();
+  }
+}
+
+function shuffleDeck() {
+  for (let i = workingDeck.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [workingDeck[i], workingDeck[j]] = [workingDeck[j], workingDeck[i]];
+  }
+  currentIndex = 0;
+  renderCard();
+}
+
+function resetDeck() {
+  quizSearch.value = '';
+  activeFilter = 'all';
+  filterChips.forEach(c => c.classList.toggle('active', c.dataset.filter === 'all'));
+  applyFilters();
+}
+
+quizCard.addEventListener('click', flipCard);
+quizFlip.addEventListener('click', flipCard);
+quizPrev.addEventListener('click', prevCard);
+quizNext.addEventListener('click', nextCard);
+quizShuffle.addEventListener('click', shuffleDeck);
+quizReset.addEventListener('click', resetDeck);
+quizSearch.addEventListener('input', applyFilters);
+
+filterChips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    filterChips.forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    activeFilter = chip.dataset.filter;
+    applyFilters();
+  });
+});
+
+// Keyboard navigation — only when on the flashcards page
+document.addEventListener('keydown', (e) => {
+  const flashcardsPage = document.getElementById('page-flashcards');
+  if (!flashcardsPage.classList.contains('active')) return;
+  if (document.activeElement && document.activeElement.tagName === 'INPUT') return;
+  if (e.key === 'ArrowLeft') { e.preventDefault(); prevCard(); }
+  else if (e.key === 'ArrowRight') { e.preventDefault(); nextCard(); }
+  else if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); flipCard(); }
+});
+
+// Initial render
+applyFilters();
+</script>
+
+</body>
+</html>
